@@ -1,11 +1,22 @@
-<div layout="column">
+<div layout="column" layout-fill>
     <md-toolbar>
         <div class="md-toolbar-tools">
             <mb-profile-widget></mb-profile-widget>
         </div>
     </md-toolbar>
-    <md-list>
-        <md-list-item>Dashboard</md-list-item>
-        <md-list-item>Accounts</md-list-item>
-    </md-list>
+    <ul style="list-style: none" flex>
+        <li>
+            <a ui-sref="landing.dashboard">
+                <h2>Dashboard</h2>
+            </a>
+        </li>
+        <li>
+            <h2 ng-click="$ctrl.toggledAccounts = !$ctrl.toggledAccounts">Accounts</h2>
+            <ul ng-if="$ctrl.toggledAccounts" style="list-style: none">
+                <li ng-repeat="account in $ctrl.accounts">
+                    {{account.label}}
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>

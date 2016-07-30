@@ -37,7 +37,8 @@ export class Accounts {
             catch (err) {
                 console.error(err)
                 // reject(err)
-                resolve(this.accounts.find(account => {return account.id === id}))
+                if (id) resolve(this.accounts.find(account => {return account.id === id}))
+                else resolve(this.accounts)
             }
         }.bind(this))
     }
