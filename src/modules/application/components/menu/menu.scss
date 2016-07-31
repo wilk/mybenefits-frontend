@@ -1,0 +1,29 @@
+.mb-menu {
+  padding-left: 15px;
+  height: calc(100% - 64px);
+}
+
+.mb-menu-new-account {
+  position: absolute !important;
+  left: 111px;
+  top: 111px;
+  font-size: 18px !important;
+}
+
+.mb-menu-accounts {
+  max-height: calc(100% - 122px);
+  height: 100%;
+}
+
+.mb-menu-accounts-list {
+  padding-left: 15px;
+  max-height: calc(100% - 61px);
+}
+
+.mb-menu-accounts-item {
+  margin: 10px 0;
+}
+
+.mb-menu-accounts-description {
+  margin-left: 10px;
+}

@@ -1,7 +1,7 @@
 export interface IAccount {
     id: string
     label: string
-    amount: number
+    balance: number
     transitions?: ITransition[]
 }
 
@@ -9,6 +9,6 @@ export interface ITransition {
     id: string
     title: string
     date: Date
-    amount: number
+    balance: number
     tags?: string[]
 }

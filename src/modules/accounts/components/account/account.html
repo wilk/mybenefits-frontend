@@ -2,21 +2,25 @@
     <mb-account-filter-bar></mb-account-filter-bar>
     <mb-account-order-bar></mb-account-order-bar>
     <mb-transition transition="transition" ng-repeat="transition in $ctrl.account.transitions"></mb-transition>
-    <md-fab-speed-dial class="md-fab-bottom-right md-fling" md-direction="up">
+    <md-fab-speed-dial class="md-fling mb-new-transaction-btn" md-direction="up">
         <md-fab-trigger>
             <md-button aria-label="menu" class="md-fab md-warn">
-                <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <md-tooltip md-direction="left">Menu</md-tooltip>
             </md-button>
         </md-fab-trigger>
         <md-fab-actions>
-            <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-                <md-icon md-svg-src="img/icons/twitter.svg" aria-label="Twitter"></md-icon>
+            <md-button aria-label="add transaction" class="md-fab md-raised md-mini">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <md-tooltip md-direction="left">New transaction</md-tooltip>
             </md-button>
-            <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-                <md-icon md-svg-src="img/icons/facebook.svg" aria-label="Facebook"></md-icon>
+            <md-button aria-label="edit account" class="md-fab md-raised md-mini">
+                <i class="fa fa-edit" aria-hidden="true"></i>
+                <md-tooltip md-direction="left">Edit account</md-tooltip>
             </md-button>
-            <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
-                <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
+            <md-button aria-label="remove account" class="md-fab md-raised md-mini">
+                <i class="fa fa-remove" aria-hidden="true"></i>
+                <md-tooltip md-direction="left">Remove account</md-tooltip>
             </md-button>
         </md-fab-actions>
     </md-fab-speed-dial>

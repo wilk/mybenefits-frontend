@@ -9,6 +9,7 @@ import './modules/application'
 import './modules/accounts'
 
 import 'angular-material/angular-material.css'
+import 'font-awesome/css/font-awesome.css'
 
 angular.module('mb', ['mb.application', 'mb.accounts', 'ngMaterial'])
 

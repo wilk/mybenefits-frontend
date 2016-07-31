@@ -1,5 +1,7 @@
 import {IAccount} from "../../util/interfaces";
 
+import './account.scss'
+
 export default class AccountComponent implements ng.IComponentOptions {
     public controller = AccountController
     public template = require('./account.html')

@@ -1,5 +1,7 @@
 import {IAccount} from "../../../accounts/util/interfaces";
 
+import './menu.scss'
+
 export default class MenuComponent implements ng.IComponentOptions {
     public controller = MenuController
     public template = require('./menu.html')
@@ -7,7 +9,6 @@ export default class MenuComponent implements ng.IComponentOptions {
 
 class MenuController {
     public accounts: IAccount[]
-    public toggledAccounts: boolean = false
 
     constructor(private Accounts) {}
 

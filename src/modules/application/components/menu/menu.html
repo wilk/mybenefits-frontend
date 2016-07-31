@@ -4,19 +4,38 @@
             <mb-profile-widget></mb-profile-widget>
         </div>
     </md-toolbar>
-    <ul style="list-style: none" flex>
-        <li>
+    <div class="mb-menu">
+        <div>
             <a ui-sref="landing.dashboard">
-                <h2>Dashboard</h2>
+                <h3>Dashboard</h3>
             </a>
-        </li>
-        <li>
-            <h2 ng-click="$ctrl.toggledAccounts = !$ctrl.toggledAccounts">Accounts</h2>
-            <ul ng-if="$ctrl.toggledAccounts" style="list-style: none">
-                <li ng-repeat="account in $ctrl.accounts">
-                    {{account.label}}
-                </li>
-            </ul>
-        </li>
-    </ul>
+        </div>
+        <div class="mb-menu-accounts">
+            <md-button class="mb-menu-new-account">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <md-tooltip md-direction="bottom">New account</md-tooltip>
+            </md-button>
+            <h3>Accounts</h3>
+            <md-content class="mb-menu-accounts-list">
+                <div class="mb-menu-accounts-item" ng-repeat="account in $ctrl.accounts track by $index">
+                    <a ui-sref="landing.accounts({id: account.id})">
+                        <div layout="row">
+                            <div flex="20">
+                                logo
+                            </div>
+                            <div class="mb-menu-accounts-description" flex="80">
+                                <div>{{account.label}}</div>
+                                <div>{{account.balance}}</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </md-content>
+        </div>
+        <div>
+            <a ui-sref="landing.dashboard">
+                <h3>Report</h3>
+            </a>
+        </div>
+    </div>
 </div>
