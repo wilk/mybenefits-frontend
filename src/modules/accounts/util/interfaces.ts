@@ -2,10 +2,10 @@ export interface IAccount {
     id: string
     label: string
     balance: number
-    transitions?: ITransition[]
+    transactions?: ITransaction[]
 }
 
-export interface ITransition {
+export interface ITransaction {
     id: string
     title: string
     date: Date

@@ -6,7 +6,7 @@ export class Accounts {
         id: '029js3kd',
         label: 'Auto',
         balance: 3000,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -47,7 +47,7 @@ export class Accounts {
         id: 'fj830kds',
         label: 'Casa',
         balance: 50000,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -88,7 +88,7 @@ export class Accounts {
         id: 'jgh28s89',
         label: 'Alimentari',
         balance: 12500,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -129,7 +129,7 @@ export class Accounts {
         id: 'fj830kd0',
         label: 'Aereo',
         balance: 50000,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -170,7 +170,7 @@ export class Accounts {
         id: 'jgh28s81',
         label: 'Auto',
         balance: 12500,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -211,7 +211,7 @@ export class Accounts {
         id: 'fj830kd2',
         label: 'Treno',
         balance: 50000,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -252,7 +252,7 @@ export class Accounts {
         id: 'jgh28s83',
         label: 'Scuola',
         balance: 12500,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -293,7 +293,7 @@ export class Accounts {
         id: 'fj830kdx',
         label: 'Luce',
         balance: 50000,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -334,7 +334,7 @@ export class Accounts {
         id: 'jgh28z83',
         label: 'Gas',
         balance: 12500,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -375,7 +375,7 @@ export class Accounts {
         id: 'xj830kd2',
         label: 'Treno',
         balance: 50000,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -416,7 +416,7 @@ export class Accounts {
         id: 'jllh22s8',
         label: 'Acqua',
         balance: 12500,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -457,7 +457,7 @@ export class Accounts {
         id: 'fj120kd2',
         label: 'Treno',
         balance: 50000,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),
@@ -498,7 +498,7 @@ export class Accounts {
         id: 'jg12ks83',
         label: 'Rifiuti',
         balance: 12500,
-        transitions: [{
+        transactions: [{
             id: '0',
             title: 'Test',
             date: new Date(),

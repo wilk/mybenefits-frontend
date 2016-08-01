@@ -1,7 +1,7 @@
 <md-content layout-padding layout="column" flex>
     <mb-account-filter-bar></mb-account-filter-bar>
     <mb-account-order-bar></mb-account-order-bar>
-    <mb-transition transition="transition" ng-repeat="transition in $ctrl.account.transitions"></mb-transition>
+    <mb-transaction transaction="transaction" ng-repeat="transaction in $ctrl.account.transactions"></mb-transaction>
     <md-fab-speed-dial class="md-fling mb-new-transaction-btn" md-direction="up">
         <md-fab-trigger>
             <md-button aria-label="menu" class="md-fab md-warn">

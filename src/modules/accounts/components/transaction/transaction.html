@@ -1,0 +1,22 @@
+<div layout="row">
+    <div flex="80">
+        <div>{{$ctrl.transaction.date | date:'dd/MM/yyyy'}}</div>
+        <div>
+            <h3 class="mb-transaction-important">{{$ctrl.transaction.title}}</h3>
+        </div>
+        <div>{{$ctrl.transaction.tags}}</div>
+    </div>
+    <div flex="20" style="text-align: center;">
+        <h3 class="mb-transaction-important">{{$ctrl.transaction.balance | currency:'€':2}}</h3>
+        <div>
+            <md-button>
+                <i class="fa fa-edit" aria-hidden="true"></i>
+                <md-tooltip md-direction="bottom">Edit transaction</md-tooltip>
+            </md-button>
+            <md-button>
+                <i class="fa fa-remove" aria-hidden="true"></i>
+                <md-tooltip md-direction="bottom">Remove transaction</md-tooltip>
+            </md-button>
+        </div>
+    </div>
+</div>
