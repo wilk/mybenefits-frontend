@@ -5,5 +5,23 @@
             <span>{{$ctrl.currentState}}</span>
         </h2>
         <span flex></span>
+        <md-fab-speed-dial class="md-fling" md-direction="left">
+            <md-fab-trigger>
+                <md-button aria-label="menu" class="md-fab md-warn">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <md-tooltip md-direction="bottom">Menu</md-tooltip>
+                </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+                <md-button aria-label="edit account" class="md-fab md-raised md-mini">
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                    <md-tooltip md-direction="bottom">Edit account</md-tooltip>
+                </md-button>
+                <md-button aria-label="remove account" class="md-fab md-raised md-mini">
+                    <i class="fa fa-remove" aria-hidden="true"></i>
+                    <md-tooltip md-direction="bottom">Remove account</md-tooltip>
+                </md-button>
+            </md-fab-actions>
+        </md-fab-speed-dial>
     </div>
 </md-toolbar>
