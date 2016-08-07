@@ -10,7 +10,7 @@ export default class AccountComponent implements ng.IComponentOptions {
 class AccountController {
     public account: IAccount
 
-    constructor(private Accounts, private $stateParams) {}
+    constructor(private Accounts, private $stateParams, private $mdDialog) {}
 
     async $onInit()  {
         try {
@@ -20,5 +20,14 @@ class AccountController {
             console.error(err)
             this.account = null
         }
+    }
+
+    newTransaction(evt) {
+        this.$mdDialog.show({
+            template: `<mb-transaction-dialog></mb-transaction-dialog>`,
+            parent: angular.element(document.body),
+            targetEvent: evt,
+            clickOutsideToClose: true
+        })
     }
 }

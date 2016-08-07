@@ -4,7 +4,7 @@
     <mb-transaction transaction="transaction" ng-repeat="transaction in $ctrl.account.transactions"></mb-transaction>
     <md-fab-speed-dial class="md-fling mb-new-transaction-btn">
         <md-fab-trigger>
-            <md-button aria-label="menu" class="md-fab md-warn">
+            <md-button ng-click="$ctrl.newTransaction($event)" aria-label="menu" class="md-fab md-warn">
                 <i class="fa fa-plus" aria-hidden="true"></i>
                 <md-tooltip md-direction="left">New transaction</md-tooltip>
             </md-button>
