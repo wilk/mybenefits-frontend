@@ -6,9 +6,21 @@ export default class NavBarComponent implements ng.IComponentOptions {
 }
 
 class NavBarController {
-    public currentState = 'Accounts'
+    public currentState: string
 
-    constructor(private $mdDialog, private $stateParams, private Accounts, private $rootScope) {}
+    constructor(private $mdDialog, private $state, private $stateParams, private Accounts, private $rootScope) {}
+
+    async $onInit() {
+        this.$rootScope.$on('$stateChangeSuccess', async function (evt, toState) {
+            if (!toState.name.includes('accounts')) return
+
+            this.currentState = (await this.Accounts.get(this.$stateParams.id)).label
+        }.bind(this))
+
+        if (this.$state.current.name.includes('accounts')) {
+            this.currentState = (await this.Accounts.get(this.$stateParams.id)).label
+        }
+    }
 
     async editAccount(evt) {
         try {
@@ -29,14 +41,20 @@ class NavBarController {
 
     async removeAccount(evt) {
         let account = await this.Accounts.get(this.$stateParams.id)
-        let result = await this.$mdDialog.confirm({
-            targetEvent: evt,
-            title: 'Confirm',
-            textContent: `Are you sure to remove ${account.label} account?`
-        })
+        let confirm = this.$mdDialog.confirm()
+            .title('Confirm')
+            .textContent(`Are you sure to remove ${account.label} account?`)
+            .ok('Remove')
+            .cancel('Cancel')
+            .targetEvent(evt)
 
-        if (result) {
+        try {
+            let result = await this.$mdDialog.show(confirm)
             // @todo: remove account through Accounts service
+            this.$mdDialog.cancel()
+        }
+        catch (err) {
+
         }
     }
 }
