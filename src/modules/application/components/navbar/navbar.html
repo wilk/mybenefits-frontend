@@ -13,11 +13,11 @@
                 </md-button>
             </md-fab-trigger>
             <md-fab-actions>
-                <md-button aria-label="edit account" class="md-fab md-raised md-mini">
+                <md-button ng-click="$ctrl.editAccount($event)" aria-label="edit account" class="md-fab md-raised md-mini">
                     <i class="fa fa-edit" aria-hidden="true"></i>
                     <md-tooltip md-direction="bottom">Edit account</md-tooltip>
                 </md-button>
-                <md-button aria-label="remove account" class="md-fab md-raised md-mini">
+                <md-button ng-click="$ctrl.removeAccount($event)" aria-label="remove account" class="md-fab md-raised md-mini">
                     <i class="fa fa-remove" aria-hidden="true"></i>
                     <md-tooltip md-direction="bottom">Remove account</md-tooltip>
                 </md-button>

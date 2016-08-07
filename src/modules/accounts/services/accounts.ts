@@ -542,6 +542,14 @@ export class Accounts {
     get(id?: string): ng.IPromise<IAccount[]|IAccount> {
         return this.$q(async function (resolve, reject) {
             try {
+                // cached accounts
+                if (this.accounts.length > 0) {
+                    if (id) resolve(this.accounts.find(account => {return account.id === id}))
+                    else resolve(this.accounts)
+                    
+                    return
+                }
+                
                 let url = `${this.API_URL}/accounts`
                 if (id) url += `/${id}`
                 let res = await this.$http.get(url)
@@ -551,6 +559,8 @@ export class Accounts {
             catch (err) {
                 console.error(err)
                 // reject(err)
+                
+                // @todo: remove this mocukup
                 if (id) resolve(this.accounts.find(account => {return account.id === id}))
                 else resolve(this.accounts)
             }

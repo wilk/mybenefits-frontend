@@ -8,9 +8,10 @@ export default class MenuComponent implements ng.IComponentOptions {
 }
 
 class MenuController {
-    public accounts: IAccount[]
+    public accounts:IAccount[]
 
-    constructor(private Accounts) {}
+    constructor(private Accounts, private $mdDialog) {
+    }
 
     async $onInit() {
         try {
@@ -20,8 +21,17 @@ class MenuController {
             console.error(err)
         }
     }
-    
-    go(state: string) {
-        
+
+    go(state:string) {
+
+    }
+
+    newAccount(evt) {
+        this.$mdDialog.show({
+            template: '<mb-account-dialog></mb-account-dialog>',
+            parent: angular.element(document.body),
+            targetEvent: evt,
+            clickOutsideToClose: true
+        })
     }
 }
